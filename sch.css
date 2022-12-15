@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  header{
+    width: 100%;
+    height: 50px;
+    background: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  main h1{
+    color: darkblue;
+    font-size: 40px;
+  }
+  
+  .logo{
+  padding: 100px;
+  margin-top: 60px;
+  width: 400px;
+  height: 400px;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  
+  .nav{
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav ol{
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav ol li{
+    margin: 1em;
+  }
+  
+  .nav ol li a{
+    text-decoration: none;
+    padding: 0.2em 1.2em 0.9em 1.2em;
+    border-radius: 10px 10px 0 0;
+    color: whitesmoke;
+    transition: all .4s;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .nav ol li a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 41px;
+    border-radius: 10px 10px 0 0;
+    background: #853333;
+    transform-origin: bottom;
+    background: linear-gradient(to right, #1c7dbe,#f1740e); 
+    transform: scaleY(0.05);
+    z-index: -1;
+    transition: all .4s;
+  }
+  
+  .nav ol li a:hover::before{
+    transform: scaleY(1.1);
+  }
+  
+  .nav ol li a:hover{
+    color: white;
+  }
+  
+  .btn{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    -webkit-appearance:none;
+    appearance: none;
+    cursor: pointer;
+    display: none;
+
+  }
+  
+  .btn::before{
+    content: '\f0c9';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 700;
+    font-size: 2em;
+  }
+
+  .smcontainer{
+    /* border: 1px solid rgb(0, 0, 0); */
+    width: 10%;
+    cursor: pointer;
+  }
+
+  .acontain{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: black;
+  }
+
+  .in{
+    /* border: 1px solid green; */
+    height: 100%;
+    width: 90%;
+    padding: 3.3%;
+  }
+
+  .in button{
+    border-radius: 5px;
+  }
+
+  .incomei:hover,.meriti:hover,.castei:hover,.genderi:hover,.sporti:hover{
+    background-color: black;
+    color: white;
+  }
+  
+
+    /* Add a black background color to the top navigation bar */
+/* .topnav {
+  overflow: hidden;
+  opacity: 1;
+}
+
+/* Style the search box inside the navigation bar */
+
+
+
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  width:35%;
+  height:25px;
+  border-radius: 10px;
+} */
+
+.incomei:hover,.meriti:hover,.castei:hover,.genderi:hover,.sporti:hover{
+  background-color: black;
+  color: white;
+}
+
+.castei:checked,.genderi:checked,.sporti:checked{
+  border: none;
+}
+
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
+  
+  @media (max-width: 1200px){
+    .btn{
+        display: flex;
+        z-index: 100;
+    }
+    
+    header{
+        justify-content: space-between;
+        padding: 0 2em;
+    }
+  
+    .nav{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        background: #F8F8F8;
+        transform: translateY(-110%);
+        transition: all .4s;
+    }
+  
+    input:checked ~ .nav{
+        transform: translateY(0%);
+    }
+  
+    input:checked::before{
+        content: '\f00d';
+    }
+  
+  
+  
+  }
+  
+  @media (max-width: 700px){
+    .nav ol{
+        flex-direction: column;
+        text-align: center;
+    }
+  }
+  
+  
+  body{  
+    font-family: 'Poppins', sans-serif;  
+    font-weight: 300;  
+    font-size: 15px;  
+    line-height: 1.7;  
+    color: #c4c3ca;  
+    background: linear-gradient(to right, #1c7dbe,#f1740e);  
+    overflow-x: hidden;  
+  }
+.box{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1vw;
+}
+.sbox{
+  border: 1px solid black;
+  height: 300px;
+  width: 300px;
+  padding: 1vw;
+  margin: 2vw;
+  box-shadow: 1vw 1vw 1vw black;
+  border-radius: 2vw;
+}
+
+
+
+
+/* Search bar CSS*/
+
+#myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Grey background color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  color: black; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
